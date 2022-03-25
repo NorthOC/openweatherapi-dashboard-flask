@@ -11,3 +11,5 @@ First week (deadline: Mar 25):
 >> have a route for /welcome/home, which responds with the string "welcome home"
 >>
 >> have a route for /welcome/back, which responds with the string "welcome back"
+
+https://join.slack.com/t/newworkspace-ol06351/shared_invite/zt-160qa2y6q-2ZrTJxrHt5qQ8__NAjLrpw
