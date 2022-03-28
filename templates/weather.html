@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+</head>
+<body>
+  <h2><a href="/weather">Weather Search</a></h2>
+  <p>Type in a city to see the weather</p>
+  <form action="{{url_for('weather', city_id = city_id)}}" method="post">
+    <input id="weatherInput" type="text" name="city" id="city">
+    <button type="submit">Search</button>
+  </form>
+
+  {%if items != None:%}
+  <ul>
+    {%for item in items:%}
+    <li>
+      <a href="{{'/weather?city_id={}'.format(item['id'])}}">
+        {%if item['state'] != '':%}
+        {{item['name'] + ', ' + item['state'] + ', ' + item['country']}}
+        {%else:%}
+        {{item['name'] + ', ' + item['country']}}
+        {%endif%}
+      </a>
+    </li>
+    {%endfor%}
+  </ul>
+  {%endif%}
+
+  {%if city != None:%}
+  <div>
+  <h2>{{city['city']}}</h2>
+  <p>Temperature: {{city['temp']}}</p>
+  </div>
+  {%endif%}
+
+</body>
+</html>
