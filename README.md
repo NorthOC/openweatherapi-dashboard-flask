@@ -14,7 +14,7 @@ Weekly tasks of the course will be uploaded here. I'm guessing, in this course, 
 
 https://join.slack.com/t/newworkspace-ol06351/shared_invite/zt-160qa2y6q-2ZrTJxrHt5qQ8__NAjLrpw
 
-##Week 2
+##Week 2 (deadline: Apr 1):
 
 >You will continue to evolve previously created flask app:
 >
