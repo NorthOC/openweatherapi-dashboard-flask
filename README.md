@@ -1,6 +1,6 @@
 # Flask course - Baltic internships
 
-Weekly tasks of the course will be uploaded here. I'm guessing, in this course, we will create a bare-bone functional Flask app.
+Weekly tasks of the course will be uploaded here. If I upload the weeks challenge, it means that I am done with that week!
 
 ## First week (deadline: Mar 25):
 
@@ -12,7 +12,6 @@ Weekly tasks of the course will be uploaded here. I'm guessing, in this course, 
 >>
 >> have a route for /welcome/back, which responds with the string "welcome back"
 
-https://join.slack.com/t/newworkspace-ol06351/shared_invite/zt-160qa2y6q-2ZrTJxrHt5qQ8__NAjLrpw
 
 ## Week 2 (deadline: Apr 1):
 
