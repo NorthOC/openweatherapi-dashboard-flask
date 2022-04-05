@@ -1,8 +1,19 @@
-# This file is used by pip to install required python packages
-# Usage: pip install -r requirements.txt
 click==8.0.4
+cycler==0.11.0
 Flask==2.0.3
+fonttools==4.31.2
 itsdangerous==2.1.1
 Jinja2==3.0.3
+kiwisolver==1.4.2
 MarkupSafe==2.1.1
+matplotlib==3.5.1
+meteostat==1.6.1
+numpy==1.22.3
+packaging==21.3
+pandas==1.4.2
+Pillow==9.1.0
+pyparsing==3.0.7
+python-dateutil==2.8.2
+pytz==2022.1
+six==1.16.0
 Werkzeug==2.0.3
