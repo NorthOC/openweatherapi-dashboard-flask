@@ -32,16 +32,16 @@ Weekly tasks of the course will be uploaded here. If I upload the weeks challeng
 >1. Get geographic coordinates for a city of your liking via API call
 >>
 >>API doc: https://openweathermap.org/api/geocoding-api
-
+>
 >2. Get historical data from dev.meteostat.net via one of these methods:
 >>
 >>JSON API
 >>Python library
 >>Bulk data
-
+>
 >3. Display one year of temperature history - min., max., average
 >>Use graphical form of representation – matplotlib module
-
+>
 >4. Create a route /weather_history to display data
 >>Show city name and chart with temperature data, including legend (names of axis, description of data)
 >>In addition, separately display value for min., max., average temperature and date when it was recorded
