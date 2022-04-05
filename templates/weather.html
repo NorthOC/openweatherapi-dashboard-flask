@@ -18,11 +18,12 @@
   <ul>
     {%for item in items:%}
     <li>
+      {%if item['state'] == '':%}
       <a href="{{'/weather?city_id={}'.format(item['id'])}}">
-        {%if item['state'] != '':%}
-        {{item['name'] + ', ' + item['state'] + ', ' + item['country']}}
-        {%else:%}
         {{item['name'] + ', ' + item['country']}}
+        {%else:%}
+        <a href="{{'/weather?city_id={}&state={}'.format(item['id'], item['state'])}}">
+        {{item['name'] + ', ' + item['state'] + ', ' + item['country']}}
         {%endif%}
       </a>
     </li>
@@ -34,6 +35,13 @@
   <div>
   <h2>{{city['city']}}</h2>
   <p>Temperature: {{city['temp']}}</p>
+  {%if city['country_code'] == 'US':%}
+  <a href="{{'/weather_history?name={}&cont={}&state={}'.format(city['city'].replace(' ', '_'), city['country_code'], city['state'])}}">
+    Get historical temperature</a>
+  {%else:%}
+  <a href="{{'/weather_history?name={}&cont={}'.format(city['city'].replace(' ', '_'), city['country_code'])}}">
+    Get historical temperature</a>
+  {%endif%}
   </div>
   {%endif%}
 
