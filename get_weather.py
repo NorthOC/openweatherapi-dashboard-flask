@@ -16,8 +16,8 @@ def get_weather_results(id):
         "id": str(list_of_data['id']),
         "city": str(list_of_data['name']),
         "country_code": str(list_of_data['sys']['country']),
-        "longitude": str(list_of_data['coord']['lon']),
-        "latitude": str(list_of_data['coord']['lat']),
         "temp": str(list_of_data['main']['temp']) + 'C',
     }
   return data
+
+#print(get_weather_results(420006353))
