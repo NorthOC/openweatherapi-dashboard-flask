@@ -72,4 +72,4 @@ Weekly tasks of the course will be uploaded here. If I upload the weeks challeng
 
 *Well, it was a good run while it lasted. In these four weeks I learned how to use Flask, Jinja, SQLAlchemy and three different weather APIs. Thanks to Ints Meijers, our coordinator, for these fun challenges 
 
-(PS. the hardest one was definitely the third week, plotting data with matplotlib, converting images and pdf and csv files to base64, loading them into memory using buffers and generating a download link for the user)
+(PS. the hardest one was definitely the third week, plotting data with matplotlib, converting images and pdf and csv files to base64, loading them into memory using buffers and generating a download link for the user)*
