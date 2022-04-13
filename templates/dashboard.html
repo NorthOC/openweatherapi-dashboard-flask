@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../static/css/application.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{g.user.username}} dashboard</title>
+</head>
+<body>
+
+  <a href="/logout">Log Out</a>
+
+  <h1>{{g.user.username.capitalize()}} cities</h1>
+  {%if g.user.cities:%}
+
+    <div class="container">
+      <a href="/weather">Add</a>
+      <a href="/dashboard/refresh">Refresh</a>
+    </div>
+
+  {%endif%}
+
+  <table class="dashboard-table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>City id</th>
+        <th>City name</th>
+        <th>Country</th>
+        <th>Temp, C</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for item in g.user.cities%}
+      <tr>
+        <td>
+          <div style="position: relative; display:inline; float:left">
+            <div style="position:absolute; right: 1rem;">
+                <a href="{{'/delete?id={}'.format(item.id)}}" style="color:darkred" class="dashboard-link remove">--</a>
+            </div>
+          </div>
+          {{item.id}}</td>
+        <td>{{item.city_id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.country_code}}</td>
+        <td>{{item.temp}}
+          <div style="position: relative; float:right">
+            <div style="position:absolute; display:flex">
+                <a href="{{'/update?id={}'.format(item.id)}}" class="dashboard-link">Edit</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+    {%endfor%}
+    </tbody>
+  </table>
+</body>
+</html>
