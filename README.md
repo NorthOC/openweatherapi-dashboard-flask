@@ -47,3 +47,29 @@ Weekly tasks of the course will be uploaded here. If I upload the weeks challeng
 >>In addition, separately display value for min., max., average temperature and date when it was recorded
 >>Provide a download link for an Excel document with temperature data (raw data)
 >>Provide a download link for an PDF document with temperature chart (graphical data)
+
+## Final Week (deadline: Apr 15):
+>1. Record each weather search to logfile
+>>
+>>Log: Date, Time, City, Temperature
+>>
+>2. Create a route /log to display data for last 5 searches
+>>
+>>Think about persistent data. Last 5 searches must be displayed even after flask is restarted
+>>
+>3.Create a route /cities
+>>
+>>Display current list of cities of interest and their current temperature (updates on list change)
+>>Let user add city to the list
+>>Let user change list entry (change city name)
+>>Let user delete city from the list
+>>Record add/change/delete events to logfile
+>>Let user manually refresh currently listed cities temperature data
+>>Current list and temperature must persist after flask is restarted
+>>
+>Optional advanced task: implement this for multiple users (identified by login)
+
+
+*Well, it was a good run while it lasted. In these four weeks I learned how to use Flask, Jinja, SQLAlchemy and three different weather APIs. Thanks to Ints Meijers, our coordinator, for these fun challenges 
+
+(PS. the hardest one was definitely the third week, plotting data with matplotlib, converting images and pdf and csv files to base64, loading them into memory using buffers and generating a download link for the user)
