@@ -9,7 +9,7 @@
 <body>
   <h2><a href="/weather">Weather Search</a></h2>
   <p>Type in a city to see the weather</p>
-  <form action="{{url_for('weather', city_id = city_id)}}" method="post">
+  <form action="{{url_for('weather', city_id = city_id, user_id = user)}}" method="post">
     <input id="weatherInput" type="text" name="city" id="city">
     <button type="submit">Search</button>
   </form>
@@ -19,10 +19,10 @@
     {%for item in items:%}
     <li>
       {%if item['state'] == '':%}
-      <a href="{{'/weather?city_id={}'.format(item['id'])}}">
+      <a href="{{'/weather?city_id={}&user_id={}'.format(item['id'], user)}}">
         {{item['name'] + ', ' + item['country']}}
         {%else:%}
-        <a href="{{'/weather?city_id={}&state={}'.format(item['id'], item['state'])}}">
+        <a href="{{'/weather?city_id={}&state={}&user_id={}'.format(item['id'], item['state'], user)}}">
         {{item['name'] + ', ' + item['state'] + ', ' + item['country']}}
         {%endif%}
       </a>
@@ -34,13 +34,16 @@
   {%if city != None:%}
   <div>
   <h2>{{city['city']}}</h2>
-  <p>Temperature: {{city['temp']}}</p>
+  <p>Temperature: {{city['temp']}} C</p>
   {%if city['country_code'] == 'US':%}
   <a href="{{'/weather_history?name={}&cont={}&state={}'.format(city['city'].replace(' ', '_'), city['country_code'], city['state'])}}">
     Get historical temperature</a>
   {%else:%}
   <a href="{{'/weather_history?name={}&cont={}'.format(city['city'].replace(' ', '_'), city['country_code'])}}">
     Get historical temperature</a>
+  {%endif%}
+  {%if g.user:%}
+  <a href="{{'/add?id={}'.format(city['id'])}}" style="display: block;">Add to your dashboard</a>
   {%endif%}
   </div>
   {%endif%}
