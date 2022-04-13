@@ -1,4 +1,3 @@
-from crypt import methods
 import os
 from flask import Flask, redirect, render_template, url_for, request, session, g
 
