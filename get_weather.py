@@ -16,7 +16,7 @@ def get_weather_results(id):
         "id": str(list_of_data['id']),
         "city": str(list_of_data['name']),
         "country_code": str(list_of_data['sys']['country']),
-        "temp": str(list_of_data['main']['temp']) + 'C',
+        "temp": str(list_of_data['main']['temp']),
     }
   return data
 
