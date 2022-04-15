@@ -12,20 +12,16 @@
   <a href="/logout">Log Out</a>
 
   <h1>{{g.user.username.capitalize()}} cities</h1>
-  {%if g.user.cities:%}
 
     <div class="container">
       <a href="/weather">Add</a>
       <a href="/dashboard/refresh">Refresh</a>
     </div>
 
-  {%endif%}
 
   <table class="dashboard-table">
     <thead>
       <tr>
-        <th>id</th>
-        <th>City id</th>
         <th>City name</th>
         <th>Country</th>
         <th>Temp, C</th>
@@ -40,9 +36,7 @@
                 <a href="{{'/delete?id={}'.format(item.id)}}" style="color:darkred" class="dashboard-link remove">--</a>
             </div>
           </div>
-          {{item.id}}</td>
-        <td>{{item.city_id}}</td>
-        <td>{{item.name}}</td>
+        {{item.name}}</td>
         <td>{{item.country_code}}</td>
         <td>{{item.temp}}
           <div style="position: relative; float:right">

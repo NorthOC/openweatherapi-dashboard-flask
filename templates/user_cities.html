@@ -12,8 +12,6 @@
   <table class="dashboard-table">
     <thead>
       <tr>
-        <th>id</th>
-        <th>City id</th>
         <th>City name</th>
         <th>Country</th>
         <th>Temp, C</th>
@@ -22,8 +20,6 @@
     <tbody>
       {%for item in user.cities%}
       <tr>
-        <td>{{item.id}}</td>
-        <td>{{item.city_id}}</td>
         <td>{{item.name}}</td>
         <td>{{item.country_code}}</td>
         <td>{{item.temp}}</td>
