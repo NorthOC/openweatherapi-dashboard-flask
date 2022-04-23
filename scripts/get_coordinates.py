@@ -1,5 +1,4 @@
 import configparser
-from itertools import count
 from urllib import request
 import json
 

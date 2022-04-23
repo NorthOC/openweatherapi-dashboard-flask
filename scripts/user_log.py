@@ -1,5 +1,4 @@
 from datetime import datetime
-import os
 
 def log_user_action(user, action, city=None, updated_to=None):
   actions = ["refresh", "add", "update", "delete"]

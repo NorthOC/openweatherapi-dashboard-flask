@@ -5,13 +5,14 @@ from flask import Flask, redirect, render_template, url_for, request, session, g
 from flask_sqlalchemy import SQLAlchemy
 
 # custom functions
-from city_search import find_city
-from get_weather import get_weather_results
-from get_coordinates import get_coordinates
-from get_meteostat import get_meteostat_data_detailed
-from history_log import update_history
-from history_log import output_logs
-from user_log import log_user_action
+from scripts.city_search import find_city
+from scripts.get_weather import get_weather_results
+from scripts.get_coordinates import get_coordinates
+from scripts.get_meteostat import get_meteostat_data_detailed
+from scripts.history_log import update_history
+from scripts.history_log import output_logs
+from scripts.user_log import log_user_action
+
 app = Flask(__name__)
 
 # secret key needed for log in sessions
